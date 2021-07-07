@@ -4,6 +4,10 @@
   height: 20rem;
   border-radius: 15px;
   transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-container {
@@ -28,4 +32,31 @@
 .pre:hover,
 .next:hover {
   opacity: 1;
+}
+
+.value {
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+  color: whitesmoke;
+}
+
+/* Styles for Dynamically Created output Element */
+.container {
+  border: 1px solid black;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.outputContainer {
+  color: lightgray;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+.outputContainer > p {
+  margin: 10px;
 }

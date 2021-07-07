@@ -8,5 +8,8 @@ clicker.addEventListener('click', function(){
     let tempText = document.createTextNode(inputEle.value);
     li.appendChild(tempText);
     mainList.appendChild(li);
+
+    console.log(li);
+    console.log(tempText);
   }
 })
