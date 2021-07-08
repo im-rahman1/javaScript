@@ -1,32 +1,15 @@
-let arr = ['a', 'b', 'c', 'd', 'e'];
+const divs = document.querySelectorAll("div");
+divs.forEach(function(el, index) {
+  el.addEventListener("click", function(e) {
+    console.log(this);
+    this.style.backgroundColor = randomColor();
+  })
+})
 
-console.log(arr);
-
-let curr = arr.length-1;
-
-function prev() {
-  let index = curr--;
-  console.log(arr[index]);
+function randomColor(){
+  return `rgb(${random(255)}, ${random(255)}, ${random(255)}`;
 }
 
-function next() {
-  let index = ++curr;
-  console.log(arr[index]);
+function random(num) {
+  return Math.floor(Math.random() * (num + 1));
 }
-
-const container = document.querySelector(".container");
-
-function createText(text){
-  const div = document.createElement('div');
-  const p = document.createElement('p');
-  const textNode = document.createTextNode(text);
-  p.appendChild(textNode);
-  div.appendChild(p);
-  container.appendChild(div);
-  p.className = "output";
-  div.className = "outputContainer"
-
-  console.log(div);
-}
-
-createText("hello everyone! How are you? hello everyone! How are you? hello everyone! How are you?");
