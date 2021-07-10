@@ -41,8 +41,9 @@ function previous() {
   if(pointer) {
     let prevColor = tempArr[--pointer];
     gradient.style.background = prevColor;
-    // console.log("preIf");
     showOutput(prevColor);
+    
+    // console.log("preIf");
   }
   else {
     console.log("end");
